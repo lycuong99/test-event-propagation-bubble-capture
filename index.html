@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>This is a simple HTML + CSS template!</h1>
+    <div id="container">
+      <button id="button">aa</button>
+    </div>
+
+    <script>
+      function first(event) {
+        // event.stopPropagation();
+        event.stopImmediatePropagation();
+        console.log(1);
+      }
+      function second() {
+        console.log(2);
+      }
+      function third() {
+        console.log(3);
+      }
+      function four() {
+        console.log(4);
+      }
+      var button = document.getElementById("button");
+      var container = document.getElementById("container");
+      button.addEventListener("click", first);
+      button.addEventListener("click", second);
+      container.addEventListener("click", third, true);
+      container.addEventListener("click", four);
+    </script>
+  </body>
+</html>
